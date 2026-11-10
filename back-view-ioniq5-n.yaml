@@ -2,7 +2,7 @@ type: picture-elements
 image: /local/ioniqna/ioniq5-back.png
 elements:
   - type: image
-    entity: sensor.ioniq_5_data
+    entity: sensor.ioniq_5n_data
     image: /local/ioniqna/ioniq5-back.png
     style:
       left: 50%
@@ -12,7 +12,7 @@ elements:
     entity: sensor.ioniq_battery_dots
     tap_action:
       action: none
-    image: /local/ioniq2/centre-squares.png
+    image: /local/ioniqa/centre-squares.png
     state_image:
       "10": /local/ioniqna/10.png
       "20": /local/ioniqna/20.png
@@ -28,13 +28,13 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
       style: |
         ha-card {
           box-shadow: none;
         }
   - type: image
-    entity: binary_sensor.ioniq_5_engine
+    entity: binary_sensor.ioniq_5n_engine
     tap_action:
       action: none
     image: /local/ioniqa/night-light.png
@@ -44,17 +44,17 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
-    entity: device_tracker.ioniq5_device_tracker
+    entity: device_tracker.ioniq_5n_location
     image: /local/ioniqna/backpanel.png
     style:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
-    entity: binary_sensor.ioniq_5_ev_battery_charge
+    entity: binary_sensor.ioniq_5n_ev_battery_charge
     tap_action:
       action: none
     image: /local/ioniqa/brake-light.png
@@ -65,9 +65,9 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: custom:button-card
-    entity: sensor.ioniq_5_ev_range
+    entity: sensor.ioniq_5n_ev_range
     color: auto
     size: 20%
     name: GuessOmeter
@@ -99,7 +99,7 @@ elements:
       top: 77%
       width: 30%
   - type: image
-    entity: binary_sensor.ioniq_5_ev_battery_plug
+    entity: binary_sensor.ioniq_5n_ev_battery_plug
     state_image:
       "off": /local/ioniqna/unplugged.png
       "on": /local/ioniqna/pluggedin.png
@@ -109,7 +109,7 @@ elements:
       width: 11%
       transform: initial
   - type: custom:button-card
-    entity: ioniq_5_smart_key_battery_warning
+    entity: ioniq_5n_smart_key_battery_warning
     icon: phu:car-fob
     size: 100%
     show_name: false

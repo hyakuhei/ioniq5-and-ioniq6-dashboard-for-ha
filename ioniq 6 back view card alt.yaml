@@ -28,7 +28,7 @@ elements:
       left: 50%
       top: 50%
       width: 120%
-      heigth: 100%
+      height: 100%
       style: |
         ha-card {
           box-shadow: none;

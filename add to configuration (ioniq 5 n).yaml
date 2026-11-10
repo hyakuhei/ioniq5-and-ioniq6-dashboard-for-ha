@@ -1,0 +1,28 @@
+# Helper sensors used by the Ioniq 5 N cards (topview-ioniq5-n.yaml, back-view-ioniq5-n.yaml,
+# backview-ioniq5-n-alt.yaml). Entity names assume the Hyundai/Kia Connect (kia_uvo) integration
+# names the car "IONIQ 5N" (entities sensor.ioniq_5n_...). Adjust if yours differ.
+#
+# Either paste this into configuration.yaml, or create the same two sensors as UI template
+# helpers (Settings > Devices & services > Helpers > Template > Template a sensor) using the
+# names and state templates below.
+#
+# The upstream snippet defined these as ioniq_battery_dot_state / ioniq_battery_port_state,
+# but the cards look for ioniq_battery_dots / ioniq_battery_percentage_state; fixed here.
+# The upstream "miles per kWh" sensor is dropped: kia_uvo provides no average-consumption
+# sensor for this car, and the element using it was removed from the N cards.
+template:
+  - sensor:
+      # Battery level rounded up to the next 10 (37.5 -> 40); picks ioniqna/10.png ... 100.png
+      - name: "ioniq battery dots"
+        unique_id: ioniq_battery_dots
+        state: >-
+          {{ states('sensor.ioniq_5n_ev_battery_level') | float(0) | round(-1, 'ceil') | int }}
+
+      # Charge-port graphic: 0-4 while charging, 6-10 when not; picks chargeport/state-N
+      - name: "ioniq battery percentage state"
+        unique_id: ioniq_battery_percentage_state
+        state: >-
+          {% set charging = is_state('binary_sensor.ioniq_5n_ev_battery_charge', 'on') %}
+          {% set level = states('sensor.ioniq_5n_ev_battery_level') | float(0) %}
+          {% set step = 0 if level <= 0 else 1 if level <= 25 else 2 if level <= 50 else 3 if level < 100 else 4 %}
+          {{ step if charging else step + 6 }}

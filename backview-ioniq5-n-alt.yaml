@@ -2,7 +2,7 @@ type: picture-elements
 image: /local/ioniqna/ioniq5-back.png
 elements:
   - type: image
-    entity: sensor.ioniq_5_data
+    entity: sensor.ioniq_5n_data
     image: /local/ioniqna/ioniq5-back.png
     style:
       left: 50%
@@ -12,7 +12,7 @@ elements:
     entity: sensor.ioniq_battery_dots
     tap_action:
       action: none
-    image: /local/ioniqna/centre-squares.png
+    image: /local/ioniqa/centre-squares.png
     state_image:
       "10": /local/ioniqa/10.png
       "20": /local/ioniqa/20.png
@@ -28,18 +28,18 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
       style: |
         ha-card {
           box-shadow: none;
         }
   - type: state-label
-    entity: sensor.ioniq_5_last_updated_at
+    entity: sensor.ioniq_5n_last_updated_at
     style:
       top: 51.5%
       left: 50%
   - type: image
-    entity: binary_sensor.ioniq_5_engine
+    entity: binary_sensor.ioniq_5n_engine
     tap_action:
       action: none
     image: /local/ioniqa/night-light.png
@@ -49,17 +49,17 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
-    entity: device_tracker.ioniq5_device_tracker
+    entity: device_tracker.ioniq_5n_location
     image: /local/ioniqa/backpanel.png
     style:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
-    entity: binary_sensor.ioniq_5_ev_battery_charge
+    entity: binary_sensor.ioniq_5n_ev_battery_charge
     tap_action:
       action: none
     image: /local/ioniqa/brake-light.png
@@ -70,9 +70,9 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
-    entity: binary_sensor.ioniq_5_ev_battery_plug
+    entity: binary_sensor.ioniq_5n_ev_battery_plug
     state_image:
       "off": /local/ioniqna/unplugged.png
       "on": /local/ioniqna/pluggedin.png
@@ -82,7 +82,7 @@ elements:
       width: 11%
       transform: initial
   - type: custom:button-card
-    entity: lock.ioniq_5_door_lock
+    entity: lock.ioniq_5n_door_lock
     name: Doors
     color: white
     tap_action:
@@ -121,7 +121,7 @@ elements:
       left: 8%
       width: 20%
   - type: custom:button-card
-    entity: sensor.ioniq_5_car_battery_level
+    entity: sensor.ioniq_5n_car_battery_level
     name: 12V
     show_name: false
     show_icon: false
@@ -161,7 +161,7 @@ elements:
       left: 89%
       transform: scale(1)
   - type: custom:button-card
-    entity: sensor.ioniq_5_car_battery_level
+    entity: sensor.ioniq_5n_car_battery_level
     name: 12V
     show_name: false
     show_icon: true
@@ -195,7 +195,7 @@ elements:
       left: 85%
       transform: scale(1.4)
   - type: custom:slider-entity-row
-    entity: number.ioniq_5_dc_charging_limit
+    entity: number.ioniq_5n_dc_charging_limit
     name: DC Limit
     style:
       top: 88%
@@ -204,7 +204,7 @@ elements:
       font-family: null
       transform: scale(1,1)
   - type: custom:slider-entity-row
-    entity: number.ioniq_5_ac_charging_limit
+    entity: number.ioniq_5n_ac_charging_limit
     name: AC Limit
     style:
       top: 81%
@@ -213,7 +213,7 @@ elements:
       font-family: null
       transform: scale(1,1)
   - type: custom:button-card
-    entity: sensor.ioniq_5_ev_battery_level
+    entity: sensor.ioniq_5n_ev_battery_level
     color: auto
     size: 100%
     name: EV Battery
@@ -246,35 +246,7 @@ elements:
             background-color: rgba(0, 0, 0, 0.1);
         }
   - type: custom:button-card
-    entity: sensor.ioniq_average_energy_consumption_mi_kwh
-    color: auto
-    size: 100%
-    name: m/kWh
-    show_name: true
-    show_state: true
-    show_icon: false
-    hold_action:
-      action: default
-    styles:
-      card:
-        - border-radius: 20px
-        - box-shadow: none
-        - background: transparent
-        - border: 0
-      name:
-        - font-size: 100%
-        - padding-right: 0%
-        - padding-bottom: 0%
-        - color: white
-      state:
-        - font-size: 100%
-        - color: white
-    style:
-      left: 64%
-      top: 75%
-      width: 20%
-  - type: custom:button-card
-    entity: sensor.ioniq_5_ev_range
+    entity: sensor.ioniq_5n_ev_range
     color: auto
     size: 80%
     name: GuessOmeter

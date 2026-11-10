@@ -8,7 +8,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_steering_wheel_heater
     state_image:
@@ -18,7 +18,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_front_left_door
     state_image:
@@ -28,7 +28,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_front_right_door
     state_image:
@@ -38,7 +38,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_back_left_door
     state_image:
@@ -48,7 +48,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_back_right_door
     state_image:
@@ -58,7 +58,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_hood
     state_image:
@@ -68,7 +68,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_trunk
     state_image:
@@ -78,7 +78,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: custom:button-card
     entity: binary_sensor.ioniq_5_air_conditioner
     icon: mdi:fan

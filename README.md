@@ -1,3 +1,20 @@
+> **Fork notes (hyakuhei, branch `ioniq5n-fixes`, November 2026)** - based on upstream commit `ba2e0a2`.
+>
+> Changes, aimed at the **Ioniq 5 N** cards with the current Hyundai/Kia Connect (`kia_uvo` v4) integration:
+> - N cards use the integration's real entity names (`ioniq_5n_...`, `device_tracker.ioniq_5n_location`).
+> - New `add to configuration (ioniq 5 n).yaml`: the two helper sensors the N cards need, in current
+>   template syntax and under the names the cards actually use (upstream defined them under other names).
+> - Missing image fixed (`centre-squares.png` lives in `ioniqa/`); the N top view now uses the N
+>   (`ioniqnb/`) versions of the front-right-door and steering-wheel images.
+> - `heigth` typo fixed in all cards (the image heights were silently ignored).
+> - "Miles per kWh" element removed from the N cards (no matching sensor in `kia_uvo` for this car).
+> - `fonts/fonts.css` only declares fonts that ship here, all under `/local/`.
+> - Text/XMP metadata stripped from the PNGs (image data unchanged).
+>
+> Security review before use: every file's content matches its type; no PNG/GIF carries data after its
+> end marker; no URLs, network calls or `eval`-style code anywhere; the only JavaScript is a colour rule
+> in `button-card` templates and the 15-line `fonts/loadfonts.js`, which only adds the local stylesheet.
+
 # ioniq5 & ioniq 6 cards for Home Assistant
 
 # Custom card layouts with images for home assistant for the ionic 5 and ioniq 6

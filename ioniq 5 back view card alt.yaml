@@ -28,7 +28,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
       style: |
         ha-card {
           box-shadow: none;
@@ -49,7 +49,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: device_tracker.ioniq5_device_tracker
     image: /local/ioniqa/backpanel.png
@@ -57,7 +57,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_ev_battery_charge
     tap_action:
@@ -70,7 +70,7 @@ elements:
       left: 50%
       top: 50%
       width: 100%
-      heigth: 100%
+      height: 100%
   - type: image
     entity: binary_sensor.ioniq_5_ev_battery_plug
     state_image:
